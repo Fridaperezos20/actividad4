@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria AXIOS peticion JSON</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    
+</head>
+<body>
+    <h1>EVIDENCIA 4:Libreria AXIOS peticion JSON</h1>
+
+    <p>
+        <label for="buscar">ID</label> 
+        <input type="text" name="ID" id="buscar">
+        <button id="buscador"> Buscar ID</button>
+    </p>
+
+    <p>
+        <label for="nom">Nombre</label> 
+        <input type="text" name="Nombre" id="nom">
+    </p>
+
+    <p>
+        <label for="nomu">Nombre de Usuario</label> 
+        <input type="text" name="NombreU" id="nomu">
+    </p>
+
+    <p>
+        <label for="mail">E-mail</label> 
+        <input type="text" name="Email" id="mail">
+    </p>
+
+    <p>
+        <label for="">Direccion</label>    
+        <input type="text" name="ID" id="calle"></p>   
+        <p><input type="text" name="ID" id="num"></p>
+        <p><input type="text" name="ID" id="cid"></p>
+      
+
+    <script>
+        const btn = document.getElementById('buscador')
+        btn.addEventListener('click', () => {
+
+      
+        axios({
+
+            method: 'GET',
+            url: 'https://jsonplaceholder.typicode.com/users'
+        }).then(res =>{
+            console.log(res.data)
+            let buscar2 = document.getElementById('buscar').value
+            for(const x of res.data){
+                if(buscar2 == x.id){
+                    document.getElementById('nom').value = x.name;
+                    document.getElementById('nomu').value = x.username;
+                    document.getElementById('mail').value = x.email;
+                    document.getElementById('calle').value = x.address.street;
+                    document.getElementById('num').value = x.address.suite;
+                    document.getElementById('cid').value = x.address.city;
+                }
+            }
+        }).catch(err => console.log(err))
+
+        })
+
+    </script>
+</body>
+</html>

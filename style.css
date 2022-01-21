@@ -1,0 +1,53 @@
+body {
+    
+    background-color: rgb(208, 220, 243);
+}
+
+h1{color:rgb(2, 3, 68);
+    font-size:50px;
+    font-family:Courier;
+    font-weight:bold;
+    font-style:italic;
+    line-height:30px;
+    letter-spacing:5px;
+    text-transform:capitalize;
+    text-align:left;
+    text-indent:30px;
+   }
+
+P {color:rgb(46, 85, 214);
+   font-size:20px;
+   font-family:Courier;
+   font-weight:bold;
+   font-style:italic;
+   line-height:30px;
+   letter-spacing:5px;
+   text-transform:capitalize;
+   text-align:left;
+   text-indent:30px;
+  }
+
+  button{color:rgb(255, 255, 255);
+    font-size:15px;
+   font-family:Courier;
+   font-weight:bold;
+   font-style:italic;
+   line-height:30px;
+   letter-spacing:5px;
+   text-transform:capitalize;
+   text-align:left;
+   text-indent:30px;
+   background-color: rgb(10, 43, 192);
+  }
+
+  input{color:rgb(0, 0, 0);
+    width: 300px;
+    font-size:15px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-weight:bold;
+   font-style:normal;
+   line-height:30px;
+   text-transform:capitalize;
+   background-color: rgb(148, 164, 238);
+
+  }
